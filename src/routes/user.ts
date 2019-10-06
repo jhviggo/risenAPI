@@ -12,7 +12,7 @@ router.get(
 );
 
 router.get(
-    "/:id(\d+)",
+    "/:id(\\d+)",
     [checkJwt, checkRole(["ADMIN"])],
     UserController.getOneById
 );
@@ -23,13 +23,13 @@ router.post(
 );
 
 router.patch(
-    "/:id(\d+)",
+    "/:id(\\d+)",
     [checkJwt, checkRole(["ADMIN"])],
     UserController.editUser
 );
 
 router.delete(
-    "/:id(\d+)",
+    "/:id(\\d+)",
     [checkJwt, checkRole(["ADMIN"])],
     UserController.deleteUser
 );
